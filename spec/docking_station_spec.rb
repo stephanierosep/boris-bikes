@@ -15,5 +15,8 @@ describe DockingStation do
 
   it "allows us to dock a bike" do
     expect(docking_station).to respond_to('dock_bike')
+    new_bike = docking_station.release_bike
+    docking_station.dock_bike(new_bike)
+    expect(docking_station.bikes).to include(new_bike)
   end
 end
