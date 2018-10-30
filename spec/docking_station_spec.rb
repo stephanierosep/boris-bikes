@@ -12,5 +12,8 @@ describe DockingStation do
     expect(bike).not_to eq(nil)
     expect(bike).to respond_to("working?")
   end
-  
+
+  it "allows us to dock a bike" do
+    expect(docking_station).to respond_to('dock_bike')
+  end
 end

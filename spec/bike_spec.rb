@@ -1,4 +1,4 @@
-require 'bike.rb'
+require 'docking_station.rb'
 
 describe Bike do
   bike = Bike.new
