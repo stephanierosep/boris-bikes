@@ -11,15 +11,10 @@ class DockingStation
   end
 
   def dock_bike(bike)
-
+    fail 'Docking station full' if @bikes
     @bikes = bike
   end
 end
-
-
-
-
-
 
 class Bike
   def working?
