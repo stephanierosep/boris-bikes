@@ -1,20 +1,28 @@
 class DockingStation
-  attr_reader('bikes')
+  attr_reader :bikes
 
   def initialize
-    @bikes = []
+    @bikes
   end
 
   def release_bike
-    Bike.new
+    fail 'No bikes available' unless @bikes
+    @bikes
   end
 
   def dock_bike(bike)
-    @bikes << bike
+
+    @bikes = bike
   end
 end
 
+
+
+
+
+
 class Bike
   def working?
+    true
   end
 end
